@@ -5,15 +5,19 @@ public class AsteriskLogger implements Logger {
 	public void log(String log) {
 		System.out.println("***" + log + "***");
 	}
+	
+	
 
 	@Override
 	public void error(String error) {
-		String stars = "************";
-		for (int i = 0; i < error.length(); i++) {
+		String stars = "";
+		
+		for (int i = 0; i < error.length()+13; i++) {
 			stars += "*";
 		}
+		
 		System.out.println(stars);
-		System.out.println("***ERROR:" + error + "***");
+		System.out.println("***ERROR: " + error + "***");
 		System.out.println(stars);
 
 	}
